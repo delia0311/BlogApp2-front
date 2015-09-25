@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+.blur-item {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+}
+#container {
+  margin-bottom: 60px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../../../static/background5.jpg");
+  background-attachment: fixed;
+}
+.menu-label {
+  margin-left: 5px;
+}
+#menu {
+  background-size: 100%;
+  background-color: burlywood;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#menu ul li {
+  display: inline-block;
+  float: top;
+  vertical-align: middle;
+  margin: 0;
+  padding: 10px;
+}
+#menu ul li a {
+  line-height: none;
+  text-decoration: none;
+  height: 50px;
+  padding: 0 10px;
+  font-family: 'Book Antiqua', cursive;
+  font-size: 25px;
+  color: #7C0E17;
+  cursor: pointer;
+}
+#menu ul li.listch a:hover {
+  color: white;
+}
+#content.col-md-8.col-md-offset-2 {
+  position: center;
+  background-size: 100%;
+  box-shadow: 0px 0px 5px 5px rgba(51, 51, 51, 0.7);
+}
+h1 {
+  text-align: center;
+  color: black;
+  font-family: 'Book Antiqua';
+}
+.col-md-12 {
+  padding: 0;
+}
+.col-md-8 {
+  padding: 0;
+}
+#content.col-md-8.col-md-offset-2 {
+  font-family: 'Times New Roman', cursive;
+  background-color: rgba(99, 7, 27, 0.5);
+  box-shadow: 0px 0px 5px 5px rgba(51, 51, 51, 0.7);
+}
+.welcome {
+  color: black;
+}
+#content1.col-md-7 {
+  float: left;
+  margin: 0;
+  color: burlywood;
+}
+#content2.col-md-5 {
+  float: right;
+  margin: 0;
+  color: gray;
+}
+img.image {
+  width: 70%;
+  margin-left: 15%;
+}
+img.image2 {
+  margin-left: 30%;
+}
+img.image3 {
+  width: 50%;
+  margin-left: 25%;
+}
+h2 {
+  color: white;
+  font-family: 'Pacifico', cursive;
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+#sidebar.col-md-7 {
+  float: left;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-bottom: 1px;
+}
+ul.nav {
+  list-style: none;
+  border-top: 1px solid #666;
+  margin-bottom: 1px;
+}
+ul.nav li {
+  border-bottom: 1px solid #666;
+}
+ul.nav a,
+ul.nav a:visited {
+  padding: 10px;
+  display: block;
+  width: 300px;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #666666;
+}
+ul.nav a:hover,
+ul.nav a:active,
+ul.nav a:focus {
+  background-color: transparent;
+  color: #FFF;
+}
