@@ -1,6 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
 .blur-item {
   filter: blur(5px);
   -webkit-filter: blur(5px);
@@ -8,73 +14,62 @@
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
 }
-#container {
-  margin-bottom: 60px;
-}
 body {
   margin: 0;
   padding: 0;
   background-image: url("../../../static/background5.jpg");
   background-attachment: fixed;
 }
-.menu-label {
-  margin-left: 5px;
-}
-#menu {
+#menu.col-md-8.col-md-offset-2 {
   background-size: 100%;
   background-color: burlywood;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-#menu ul {
+#menu.col-md-8.col-md-offset-2 ul {
   list-style: none;
   margin: 0;
   padding: 0;
   position: relative;
 }
-#menu ul li {
+#menu.col-md-8.col-md-offset-2 ul li {
   display: inline-block;
   float: top;
   vertical-align: middle;
   margin: 0;
   padding: 10px;
 }
-#menu ul li a {
+#menu.col-md-8.col-md-offset-2 ul li a {
   line-height: none;
   text-decoration: none;
   height: 50px;
   padding: 0 10px;
-  font-family: 'Book Antiqua', cursive;
+  font-family: 'Indie Flower';
   font-size: 25px;
   color: #7C0E17;
   cursor: pointer;
 }
-#menu ul li.listch a:hover {
+#menu.col-md-8.col-md-offset-2 ul li.listch a:hover {
   color: white;
 }
-#content.col-md-8.col-md-offset-2 {
+#content-home.col-md-8.col-md-offset-2 {
   position: center;
   background-size: 100%;
   box-shadow: 0px 0px 5px 5px rgba(51, 51, 51, 0.7);
 }
-h1 {
+h1.home {
   text-align: center;
   color: black;
-  font-family: 'Book Antiqua';
+  font-family: 'Indie Flower';
 }
-.col-md-12 {
+.col-md-8.col-md-offset-2 {
   padding: 0;
 }
-.col-md-8 {
-  padding: 0;
-}
-#content.col-md-8.col-md-offset-2 {
-  font-family: 'Times New Roman', cursive;
+#content-wrapper.col-md-12 {
   background-color: rgba(99, 7, 27, 0.5);
+  background-size: 100%;
   box-shadow: 0px 0px 5px 5px rgba(51, 51, 51, 0.7);
-}
-.welcome {
-  color: black;
+  margin: 0;
 }
 #content1.col-md-7 {
   float: left;
@@ -84,26 +79,33 @@ h1 {
 #content2.col-md-5 {
   float: right;
   margin: 0;
-  color: gray;
+  color: floralwhite;
+}
+.col-md-12 {
+  padding: 0;
 }
 img.image {
   width: 70%;
   margin-left: 15%;
 }
 img.image2 {
-  margin-left: 30%;
+  margin-left: 25%;
 }
 img.image3 {
   width: 50%;
   margin-left: 25%;
 }
 h2 {
+  text-align: center;
+  font-family: 'Pacifico';
   color: white;
-  font-family: 'Pacifico', cursive;
+}
+h3.black {
+  color: black;
 }
 h1,
-h2,
 h3 {
+  font-family: 'Indie Flower';
   text-align: center;
 }
 #sidebar.col-md-7 {
