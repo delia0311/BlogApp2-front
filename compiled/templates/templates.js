@@ -34,9 +34,9 @@ this["JST"]["#home-Item"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<img src="' +
+__p += '<div id="imagine"><img src="' +
 ((__t = ( model.url_image )) == null ? '' : __t) +
-'" align="left" class="url_image"/><br/><div class="titleArticle">' +
+'" align="left" class="url_image"/></div><br/><div class="titleArticle">' +
 __e( model.title ) +
 '</div><br/><div class="descriptionArticle">' +
 __e( model.description ) +
@@ -46,7 +46,7 @@ __e( model.content ) +
 __e( createDate() ) +
 '</div><a href="#update-article/' +
 __e( model.id ) +
-'"><button id="editButton" class="btn btn-default">Edit</button></a>';
+'"><button id="editButton" class="btn btn-default">Edit</button></a><button id="deleteButtonHome" class="btn btn-default">Delete</button>';
 
 }
 return __p
@@ -56,7 +56,7 @@ this["JST"]["#home-layout"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div id="content-home" class="col-md-12"><h1 class="home">Welcome to my blog :)</h1></div><br/><br/><br/><div id="wrapper-article" class="col-md-12"><div id="content-article"><li class="listaArticol"><div class="url_image">url</div><div class="titleArticle">titlu</div><div class="descriptionArticle">desc</div><div class="contentArticle">content</div><div class="date">data</div><br/></li></div></div><br/><br/>';
+__p += '<div id="content-home" class="col-md-12"><h1 class="home">Welcome to my blog :)</h1></div><br/><br/><br/><div id="wrapper-article" class="col-md-12"><div id="content-article"><li class="listaArticol"><div id="imagine">url</div><div class="titleArticle">titlu</div><div class="descriptionArticle">desc</div><div class="contentArticle">content</div><div class="date">data</div><br/></li></div></div><br/><br/>';
 
 }
 return __p
@@ -66,7 +66,53 @@ this["JST"]["#navigation-navbar"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div id="banner" class="banner col-md-8 col-md-offset-2"><img src="./static/blog_header-black.png" width="100%"/></div><div id="menu" class="col-md-8 col-md-offset-2"><ul><li class="listch"><a href="#" title="Home">Home</a></li><li class="listch"><a href="#blog" title="Blog">Blog</a></li><li class="listch"><a href="#create-article" title="Articles">Articles</a></li><li class="listch"><a href="#comment" title="Comments">Comments</a></li><li class="listch"><a href="#contact" title="Contact">Contact</a></li></ul></div>';
+__p += '<div id="banner" class="banner col-md-8 col-md-offset-2"><img src="./static/blog_header-black.png" width="100%"/></div><div id="menu" class="col-md-8 col-md-offset-2"><ul><li class="listch"><a href="#" title="Home">Home</a></li><li class="listch"><a href="#blog" title="Blog">Blog</a></li><li class="listch"><a href="#create-article" title="Articles">Articles</a></li><li class="listch"><a href="#contact" title="Contact">Contact</a></li></ul></div>';
+
+}
+return __p
+};
+
+this["JST"]["#showArticle-article-comment"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<br/><div class="contentComm">' +
+__e( model.content ) +
+'</div><br/><div class="dateComm">' +
+__e( createDate() ) +
+'</div>';
+
+}
+return __p
+};
+
+this["JST"]["#showArticle-article-details"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<h2>This is my article with id = ' +
+__e( model.id ) +
+'</h2><br/><div id="imageShow"><img src="' +
+((__t = ( model.url_image )) == null ? '' : __t) +
+'" align="left" class="imageShowArticle"/></div><br/><div class="titleShowArticle">' +
+__e( model.title ) +
+'</div><br/><div class="descriptionShowArticle">' +
+__e( model.description ) +
+'</div><br/><div class="contentShowArticle">' +
+__e( model.content ) +
+'</div><br/><div class="dateShowArticle">' +
+__e( createDate() ) +
+'</div>';
+
+}
+return __p
+};
+
+this["JST"]["#showArticle-layout"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div id="show"><div id="show-wrapper"><div id="show-article-details"></div><br/><br/><h2 class="comment">Comments</h2><br/><div id="show-article-comments"></div></div></div>';
 
 }
 return __p

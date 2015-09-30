@@ -1,4 +1,5 @@
-img.url_image(src!="<%= model.url_image %>", align="left")
+#imagine
+    img.url_image(src!="<%= model.url_image %>", align="left")
 br
 .titleArticle
     <%- model.title %>
@@ -14,5 +15,6 @@ br
 a(href!='#update-article/<%- model.id %>')
     button#editButton.btn.btn-default
         |Edit
-
+button#deleteButtonHome.btn.btn-default
+    |Delete
 

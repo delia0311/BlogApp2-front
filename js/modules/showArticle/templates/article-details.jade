@@ -1,0 +1,22 @@
+h2
+    |This is my article with id = <%- model.id %>
+br
+#imageShow
+    img.imageShowArticle(src!="<%= model.url_image %>", align="left")
+br
+.titleShowArticle
+    <%- model.title %>
+br
+.descriptionShowArticle
+    <%- model.description %>
+br
+.contentShowArticle
+    <%- model.content %>
+br
+.dateShowArticle
+    <%- createDate() %>
+
+
+
+
+
