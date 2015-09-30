@@ -46,7 +46,7 @@ __e( model.content ) +
 __e( createDate() ) +
 '</div><a href="#update-article/' +
 __e( model.id ) +
-'"><button id="editButton" class="btn btn-default">Edit</button></a><button id="deleteButtonHome" class="btn btn-default">Delete</button>';
+'"><button id="editButton" class="btn btn-default">Edit</button></a>';
 
 }
 return __p

@@ -7,30 +7,11 @@ define(function(require, exports, module) {
         tagName: 'li',
         className:'listaArticol',
         template: '#home-Item',
-
-        events:{
-
-            'click.#deleteButtonHome' :'deleteArticle'
-        },
-
-        initialize:function(){
-
-            this.listenTo(this.model,'destroy', this.goHome);
-        },
-        goHome:function(){
-            Backbone.history.navigate('#home', true);
-        },
-
         templateHelpers:{
             createDate: function(){
                 var date = moment(new Date(this.model.date)).format("MMM Do YY");
                 return date;
             }
         }
-        ,deleteArticle : function(){
-
-            this.model.destroy();
-        }
-
     });
 });
