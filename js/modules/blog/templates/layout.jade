@@ -50,4 +50,24 @@
                 img.image2(src="./static/choose progress.png")
                 br
                 br
-                
+                form(name="form1", action="index.html", method="GET")
+                    h1.formular
+                        |Formular de inscriere
+
+                    h3.formular
+                        key Nume:
+                        input#nume.text.form-control(placeholder="Nume" aria-describedby="basic-addon1")
+
+                    h3.formular
+                        key Prenume:
+                        input#prenume.text.form-control(placeholder="Prenume" aria-describedby="basic-addon1")
+
+                    h3.formular
+                        key Email:
+                        input#email.text.form-control(placeholder="Email" aria-describedby="basic-addon1")
+
+                    p
+                        input.button(type="submit", name="submit", value="Submit")
+
+                    p
+                        input.button(type="reset", name="reset", value="Reset")

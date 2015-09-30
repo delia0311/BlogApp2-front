@@ -1,0 +1,18 @@
+img.url_image(src!="<%= model.url_image %>", align="left")
+br
+.titleArticle
+    <%- model.title %>
+br
+.descriptionArticle
+    <%- model.description %>
+br
+.contentArticle
+    <%- model.content %>
+br
+.date
+    <%- createDate() %>
+a(href!='#update-article/<%- model.id %>')
+    button#editButton.btn.btn-default
+        |Edit
+
+

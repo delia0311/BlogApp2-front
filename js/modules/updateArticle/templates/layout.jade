@@ -1,0 +1,26 @@
+h2
+    |Update Article
+.input-group
+    key.text
+        |Title
+    input#updateTitle.text.form-control(placeholder!="<%- model.title %>" aria-describedby="basic-addon1")
+br
+.input-group
+    key.text
+        |Description
+    textarea#updateDescription.text.form-control(placeholder!="<%- model.description %>" aria-describedby="basic-addon1")
+br
+.input-group
+    key.text
+        |Content
+    textarea#updateContent.text.form-control(placeholder!="<%- model.content %>" aria-describedby="basic-addon1")
+br
+.input-group
+    key.text
+        |Image
+    input#updateImage.text.form-control(placeholder!="<%= model.url_image %>" aria-describedby="basic-addon1")
+br
+button#saveButton.btn.btn-default()
+    |Update
+button#deleteButton.Button.btn.btn-default
+    |Delete
