@@ -1,6 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
-
-@import url(https://fonts.googleapis.com/css?family=Pacifico);
 .blur-item {
   filter: blur(5px);
   -webkit-filter: blur(5px);
@@ -32,16 +29,18 @@ body {
   vertical-align: middle;
   margin: 0;
   padding: 10px;
+  border-right: 3px solid transparent;
 }
 #menu.col-md-8.col-md-offset-2 ul li a {
   line-height: none;
   text-decoration: none;
   height: 50px;
   padding: 0 10px;
-  font-family: 'Indie Flower';
+  font-family: 'Book Antiqua';
   font-size: 25px;
   color: #7C0E17;
   cursor: pointer;
+  border-right: transparent;
 }
 #menu.col-md-8.col-md-offset-2 ul li.listch a:hover {
   color: white;
@@ -106,11 +105,13 @@ h1.home {
 .date {
   float: right;
 }
-#editButton.btn.btn-default {
+#editButton.btn.btn-success {
   align: left;
   box-shadow: 10px 10px 5px #000000;
 }
-#deleteButton.Button.btn.btn-default {
+#deleteButton.Button.btn.btn-default,
+#deleteButtonHome.btn.btn-default,
+#showButton.btn.btn-info {
   margin-left: 30px;
   box-shadow: 10px 10px 5px #000000;
 }
@@ -196,12 +197,9 @@ p {
   padding: 10px;
   alignment: center;
 }
-#show {
-  background-color: rgba(99, 7, 27, 0.5);
-}
 h2.comment {
   color: black;
-  align: center;
+  text-align: center;
 }
 #show-article-comments {
   color: white;
@@ -213,7 +211,7 @@ h2.comment {
 .contentComm {
   align: center;
   color: burlywood;
-  font-size: 24px;
+  font-size: 22px;
 }
 #show-article-details {
   margin-top: 25px;
@@ -249,4 +247,14 @@ h2.comment {
 }
 .dateShowArticle {
   float: right;
+}
+h4 {
+  color: white;
+  float: left;
+  font-family: "Book Antiqua";
+}
+h4 {
+  color: white;
+  float: left;
+  font-family: "Book Antiqua";
 }

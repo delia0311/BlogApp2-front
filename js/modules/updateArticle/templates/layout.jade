@@ -1,26 +1,28 @@
 h2
     |Update Article
 .input-group
-    key.text
+    h4
         |Title
-    input#updateTitle.text.form-control(placeholder!="<%- model.title %>" aria-describedby="basic-addon1")
+    input#updateTitle.text.form-control(value!="<%= model.title %>" aria-describedby="basic-addon1")
 br
 .input-group
-    key.text
+    h4
         |Description
-    textarea#updateDescription.text.form-control(placeholder!="<%- model.description %>" aria-describedby="basic-addon1")
+    textarea#updateDescription.text.form-control(aria-describedby="basic-addon1")
+            <%- model.description %>
 br
 .input-group
-    key.text
+    h4
         |Content
-    textarea#updateContent.text.form-control(placeholder!="<%- model.content %>" aria-describedby="basic-addon1")
+    textarea#updateContent.text.form-control(aria-describedby="basic-addon1")
+            <%- model.content %>
 br
 .input-group
-    key.text
+    h4
         |Image
-    input#updateImage.text.form-control(placeholder!="<%= model.url_image %>" aria-describedby="basic-addon1")
+    input#updateImage.text.form-control(value!="<%= model.url_image %>" aria-describedby="basic-addon1")
 br
-button#saveButton.btn.btn-default()
+button#saveButton.btn.btn-success()
     |Update
 button#deleteButton.Button.btn.btn-default
     |Delete

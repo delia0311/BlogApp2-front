@@ -24,7 +24,17 @@ this["JST"]["#createArticle-layout"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<h2>Create New Article</h2><div class="input-group"><input id="articleTitle" placeholder="Title" aria-describedby="basic-addon1" class="text form-control"/></div><br/><div class="input-group"><textarea id="articleDescription" placeholder="Description" aria-describedby="basic-addon1" class="text form-control"></textarea></div><br/><div class="input-group"><textarea id="articleContent" placeholder="Content" aria-describedby="basic-addon1" class="text form-control"></textarea></div><br/><div class="input-group"><input id="articleImage" placeholder="Image" aria-describedby="basic-addon1" class="text form-control"/></div><br/><button id="saveButton" class="btn btn-default">Save</button>';
+__p += '<h2>Create New Article</h2><div class="input-group"><input id="articleTitle" placeholder="Title" aria-describedby="basic-addon1" class="text form-control"/></div><br/><div class="input-group"><textarea id="articleDescription" placeholder="Description" aria-describedby="basic-addon1" class="text form-control"></textarea></div><br/><div class="input-group"><textarea id="articleContent" placeholder="Content" aria-describedby="basic-addon1" class="text form-control"></textarea></div><br/><div class="input-group"><input id="articleImage" placeholder="Image" aria-describedby="basic-addon1" class="text form-control"/></div><br/><button id="saveButton" class="btn btn-success">Save</button>';
+
+}
+return __p
+};
+
+this["JST"]["#createComment-layout"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<h2>Create New Comment</h2><div class="input-group"><textarea id="commentContent" placeholder="Content" aria-describedby="basic-addon1" class="text form-control"></textarea></div><br/><button id="saveButtonComm" class="btn btn-success">Save</button>';
 
 }
 return __p
@@ -46,7 +56,9 @@ __e( model.content ) +
 __e( createDate() ) +
 '</div><a href="#update-article/' +
 __e( model.id ) +
-'"><button id="editButton" class="btn btn-default">Edit</button></a>';
+'"><button id="editButton" class="btn btn-success">Edit</button></a><button id="deleteButtonHome" class="btn btn-default">Delete</button><a href="#show-article/' +
+__e( model.id ) +
+'"><button id="showButton" class="btn btn-info">Show Article</button></a>';
 
 }
 return __p
@@ -66,7 +78,7 @@ this["JST"]["#navigation-navbar"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div id="banner" class="banner col-md-8 col-md-offset-2"><img src="./static/blog_header-black.png" width="100%"/></div><div id="menu" class="col-md-8 col-md-offset-2"><ul><li class="listch"><a href="#" title="Home">Home</a></li><li class="listch"><a href="#blog" title="Blog">Blog</a></li><li class="listch"><a href="#create-article" title="Articles">Articles</a></li><li class="listch"><a href="#contact" title="Contact">Contact</a></li></ul></div>';
+__p += '<div id="banner" class="banner col-md-8 col-md-offset-2"><img src="./static/blog_header-black.png" width="100%"/></div><div id="menu" class="col-md-8 col-md-offset-2"><ul><li class="listch"><a href="#home" title="Home">Home</a></li><li class="listch"><a href="#blog" title="Blog">Blog</a></li><li class="listch"><a href="#create-article" title="Articles">Articles</a></li></ul></div>';
 
 }
 return __p
@@ -80,7 +92,11 @@ __p += '<br/><div class="contentComm">' +
 __e( model.content ) +
 '</div><br/><div class="dateComm">' +
 __e( createDate() ) +
-'</div>';
+'</div><br/><br/><a href="#show-article/' +
+__e( model.articleId ) +
+'/update-comment/' +
+__e( model.id ) +
+'"><button id="createComm" class="btn btn-success">Edit </button></a>';
 
 }
 return __p
@@ -102,7 +118,9 @@ __e( model.description ) +
 __e( model.content ) +
 '</div><br/><div class="dateShowArticle">' +
 __e( createDate() ) +
-'</div>';
+'</div><a href="#show-article/' +
+__e( model.id ) +
+'/create-comment"><button id="createComm" class="btn btn-info">Create Comment</button></a>';
 
 }
 return __p
@@ -112,7 +130,7 @@ this["JST"]["#showArticle-layout"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div id="show"><div id="show-wrapper"><div id="show-article-details"></div><br/><br/><h2 class="comment">Comments</h2><br/><div id="show-article-comments"></div></div></div>';
+__p += '<div id="show-article-details"></div><br/><br/><br/><br/><h2 class="comment">Comments</h2><br/><div id="show-article-comments"></div><br/><br/>';
 
 }
 return __p
@@ -122,15 +140,27 @@ this["JST"]["#updateArticle-layout"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<h2>Update Article</h2><div class="input-group"><key class="text">Title</key><input id="updateTitle" placeholder="' +
-__e( model.title ) +
-'" aria-describedby="basic-addon1" class="text form-control"/></div><br/><div class="input-group"><key class="text">Description</key><textarea id="updateDescription" placeholder="' +
+__p += '<h2>Update Article</h2><div class="input-group"><h4>Title</h4><input id="updateTitle" value="' +
+((__t = ( model.title )) == null ? '' : __t) +
+'" aria-describedby="basic-addon1" class="text form-control"/></div><br/><div class="input-group"><h4>Description</h4><textarea id="updateDescription" aria-describedby="basic-addon1" class="text form-control">' +
 __e( model.description ) +
-'" aria-describedby="basic-addon1" class="text form-control"></textarea></div><br/><div class="input-group"><key class="text">Content</key><textarea id="updateContent" placeholder="' +
+'</textarea></div><br/><div class="input-group"><h4>Content</h4><textarea id="updateContent" aria-describedby="basic-addon1" class="text form-control">' +
 __e( model.content ) +
-'" aria-describedby="basic-addon1" class="text form-control"></textarea></div><br/><div class="input-group"><key class="text">Image</key><input id="updateImage" placeholder="' +
+'</textarea></div><br/><div class="input-group"><h4>Image</h4><input id="updateImage" value="' +
 ((__t = ( model.url_image )) == null ? '' : __t) +
-'" aria-describedby="basic-addon1" class="text form-control"/></div><br/><button id="saveButton" class="btn btn-default">Update</button><button id="deleteButton" class="Button btn btn-default">Delete</button>';
+'" aria-describedby="basic-addon1" class="text form-control"/></div><br/><button id="saveButton" class="btn btn-success">Update</button><button id="deleteButton" class="Button btn btn-default">Delete</button>';
+
+}
+return __p
+};
+
+this["JST"]["#updateComment-layout"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<h2>Update Comment</h2><div class="input-group"><h4>Content</h4><input id="updateContent" value="' +
+((__t = ( model.content )) == null ? '' : __t) +
+'" aria-describedby="basic-addon1" class="text form-control"/></div><br/><button id="saveButtonComment" class="btn btn-success">Update</button><button id="deleteButtonComment" class="Button btn btn-default">Delete</button>';
 
 }
 return __p

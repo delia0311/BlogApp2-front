@@ -5,6 +5,8 @@ define(function(require, exports, module) {
     var CreateArticle = require('modules/createArticle/router');
     var UpdateArticle = require('modules/updateArticle/router');
     var ShowArticle = require('modules/showArticle/router');
+    var CreateComment = require('modules/createComment/router');
+    var UpdateComment = require('modules/updateComment/router');
 
 
     var RouterInitializer = Marionette.Controller.extend({
@@ -15,6 +17,8 @@ define(function(require, exports, module) {
                 new CreateArticle();
                 new UpdateArticle();
                 new ShowArticle();
+                new CreateComment();
+                new UpdateComment();
             });
         }
     });

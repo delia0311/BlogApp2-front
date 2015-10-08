@@ -4,3 +4,8 @@ br
 br
 .dateComm
     <%- createDate() %>
+br
+br
+a(href!='#show-article/<%- model.articleId %>/update-comment/<%- model.id %>')
+    button#createComm.btn.btn-success
+        |Edit

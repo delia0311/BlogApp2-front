@@ -13,7 +13,11 @@ br
 .date
     <%- createDate() %>
 a(href!='#update-article/<%- model.id %>')
-    button#editButton.btn.btn-default
+    button#editButton.btn.btn-success
         |Edit
-
+button#deleteButtonHome.btn.btn-default
+    |Delete
+a(href!='#show-article/<%- model.id %>')
+    button#showButton.btn.btn-info
+        |Show Article
 

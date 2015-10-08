@@ -26,7 +26,11 @@ define(function(require, exports, module) {
             this.model.set('content',articleContent);
             this.model.set('url_image',articleImage);
 
-            this.model.save();
+            this.model.url = 'http://localhost:8081/blog-rest-service/article';
+
+            this.model.save().always(function(){
+                Backbone.history.navigate('#home', true);
+            })
 
         }
 

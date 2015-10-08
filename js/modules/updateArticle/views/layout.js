@@ -9,7 +9,7 @@ define(function(require, exports, module) {
 
         events:{
             'click #saveButton': 'saveNewArticle',
-            'click #deleteButton': 'deleteArticle'
+            'click #deleteButton': 'deleteThisArticle'
         },
 
         initialize: function(options){
@@ -18,12 +18,11 @@ define(function(require, exports, module) {
             });
             this.model.fetch();
             this.listenTo(this.model, 'destroy', this.goHome);
+            this.listenTo(this.model,'sync', this.render);
         },
-
         goHome: function() {
             Backbone.history.navigate('#home', true);
         },
-
         saveNewArticle: function(){
             var updateTitle = $('#updateTitle').val();
             var updateDescription = $('#updateDescription').val();
@@ -38,8 +37,12 @@ define(function(require, exports, module) {
             this.model.save();
 
         },
-        deleteArticle: function(){
-            this.model.destroy();
+        deleteThisArticle: function(){
+            this.model.destroy().always(function(){
+                Backbone.history.navigate('#home', true);
+
+            })
+
         }
 
     });

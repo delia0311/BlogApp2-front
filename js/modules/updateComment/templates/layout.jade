@@ -1,0 +1,12 @@
+h2
+    |Update Comment
+.input-group
+    h4
+        |Content
+    input#updateContent.text.form-control(value!="<%= model.content %>" aria-describedby="basic-addon1")
+br
+
+button#saveButtonComment.btn.btn-success
+    |Update
+button#deleteButtonComment.Button.btn.btn-default
+    |Delete

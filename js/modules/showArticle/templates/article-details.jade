@@ -15,7 +15,9 @@ br
 br
 .dateShowArticle
     <%- createDate() %>
-
+a(href!='#show-article/<%- model.id %>/create-comment')
+    button#createComm.btn.btn-info
+        |Create Comment
 
 
 
